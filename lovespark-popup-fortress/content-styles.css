@@ -1,0 +1,65 @@
+/* LoveSpark Popup Fortress — Content Styles (document_start)
+   Cosmetic hiding of popup overlays, interstitials, exit-intent modals,
+   and notification permission prompt overlays. Popup-focused ONLY. */
+
+/* ---- Exit-intent / interstitial overlays ---- */
+[class*="exit-intent"],
+[class*="exitintent"],
+[class*="exit_intent"],
+[id*="exit-intent"],
+[id*="exitintent"],
+[id*="exit_intent"],
+[class*="interstitial-overlay"],
+[class*="interstitial_overlay"],
+[id*="interstitial"],
+[class*="popup-overlay"][style*="z-index"],
+[class*="modal-backdrop"][style*="z-index: 9"],
+[class*="lightbox-overlay"],
+[id*="lightbox-overlay"] {
+  display: none !important;
+}
+
+/* ---- Notification permission prompt overlays ---- */
+[class*="push-notification"],
+[class*="notification-prompt"],
+[class*="notification_prompt"],
+[id*="push-notification"],
+[id*="notification-prompt"],
+[class*="subscribe-overlay"],
+[class*="subscribe_overlay"],
+[id*="subscribe-overlay"],
+[class*="webpush"],
+[id*="webpush"],
+[class*="onesignal-slidedown"],
+[id*="onesignal-slidedown"],
+[class*="pushcrew"],
+[id*="pushcrew"] {
+  display: none !important;
+}
+
+/* ---- Newsletter / signup popups ---- */
+[class*="newsletter-popup"],
+[class*="newsletter_popup"],
+[id*="newsletter-popup"],
+[id*="newsletter_popup"],
+[class*="signup-popup"],
+[class*="signup_popup"],
+[id*="signup-popup"],
+[id*="signup_popup"],
+[class*="email-popup"],
+[class*="email_popup"],
+[id*="email-popup"],
+[id*="email_popup"] {
+  display: none !important;
+}
+
+/* ---- Scroll-lock removal ----
+   Many popups add overflow:hidden to body to trap the user */
+body.modal-open,
+body.popup-open,
+body.noscroll,
+body.no-scroll,
+body[style*="overflow: hidden"],
+html[style*="overflow: hidden"] {
+  overflow: auto !important;
+}

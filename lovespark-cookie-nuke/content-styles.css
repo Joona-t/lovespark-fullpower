@@ -1,0 +1,230 @@
+/* LoveSpark Cookie Annihilator — Cosmetic Hiding (document_start)
+   Hides all known consent banner elements BEFORE they render.
+   Applied at document_start to prevent any visual flash. */
+
+/* ---- OneTrust ---- */
+#onetrust-banner-sdk,
+#onetrust-consent-sdk,
+#onetrust-pc-sdk,
+.onetrust-pc-dark-filter,
+#ot-sdk-btn-floating {
+  display: none !important;
+}
+
+/* ---- Cookiebot ---- */
+#CybotCookiebotDialog,
+#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll,
+#CybotCookiebotDialogBodyUnderlay,
+.CybotCookiebotDialogActive {
+  display: none !important;
+}
+
+/* ---- CookieConsent (Osano) ---- */
+.cc-window,
+.cc-banner,
+.cc-overlay,
+.cc_banner,
+.cc_container,
+#cc_div,
+.cc-revoke,
+.cc-animate {
+  display: none !important;
+}
+
+/* ---- Quantcast ---- */
+.qc-cmp2-container,
+.qc-cmp2-main,
+#qc-cmp2-ui,
+.qc-cmp-cleanslate {
+  display: none !important;
+}
+
+/* ---- Usercentrics ---- */
+#usercentrics-root,
+#uc-center-container {
+  display: none !important;
+}
+
+/* ---- Didomi ---- */
+#didomi-host,
+#didomi-popup,
+.didomi-popup-backdrop {
+  display: none !important;
+}
+
+/* ---- Iubenda ---- */
+#iubenda-cs-banner,
+.iubenda-cs-container {
+  display: none !important;
+}
+
+/* ---- Termly ---- */
+#termly-code-snippet-support,
+.termly-consent-banner {
+  display: none !important;
+}
+
+/* ---- Complianz ---- */
+#cmplz-cookiebanner-container,
+.cmplz-cookiebanner {
+  display: none !important;
+}
+
+/* ---- Osano ---- */
+.osano-cm-window,
+.osano-cm-dialog {
+  display: none !important;
+}
+
+/* ---- Ketch ---- */
+#lanyard-root,
+.ketch-consent {
+  display: none !important;
+}
+
+/* ---- Sourcepoint / Privacy-mgmt ---- */
+.sp-message-container,
+div[id^="sp_message_container"] {
+  display: none !important;
+}
+
+/* ---- TrustArc ---- */
+#truste-consent-track,
+#consent_blackbar,
+.truste-banner {
+  display: none !important;
+}
+
+/* ---- Cookie-Script ---- */
+#cookie-script-banner,
+.cookie-script-banner-opt-in {
+  display: none !important;
+}
+
+/* ---- CookieFirst ---- */
+.cookiefirst-root,
+#cookiefirst-root {
+  display: none !important;
+}
+
+/* ---- CookieYes ---- */
+#cookie-law-info-bar,
+.cky-consent-container,
+#cky-consent {
+  display: none !important;
+}
+
+/* ---- Axeptio ---- */
+#axeptio_overlay,
+#axeptio_btn {
+  display: none !important;
+}
+
+/* ---- Borlabs ---- */
+#BorlabsCookieBox,
+.BorlabsCookie {
+  display: none !important;
+}
+
+/* ---- Moove GDPR ---- */
+#moove_gdpr_cookie_info_bar,
+.moove-gdpr-info-bar-container {
+  display: none !important;
+}
+
+/* ---- Evidon ---- */
+#_evidon_banner,
+#_evidon-consent-button {
+  display: none !important;
+}
+
+/* ---- Civic Cookie Control ---- */
+#ccc-notify,
+#ccc-overlay,
+#ccc {
+  display: none !important;
+}
+
+/* ---- Cookie Information ---- */
+#coiOverlay,
+#coiConsentBanner {
+  display: none !important;
+}
+
+/* ---- Generic patterns ---- */
+[id*="cookie-consent"],
+[id*="cookie-banner"],
+[id*="cookie-notice"],
+[id*="cookie-popup"],
+[id*="cookie-bar"],
+[id*="cookie-alert"],
+[id*="cookie-modal"],
+[id*="cookie_consent"],
+[id*="cookie_banner"],
+[id*="cookie_notice"],
+[id*="cookieconsent"],
+[id*="cookiebanner"],
+[id*="cookienotice"],
+[class*="cookie-consent"],
+[class*="cookie-banner"],
+[class*="cookie-notice"],
+[class*="cookie-popup"],
+[class*="cookie-bar"],
+[class*="cookie-alert"],
+[class*="cookie-modal"],
+[class*="cookie_consent"],
+[class*="cookie_banner"],
+[class*="cookie_notice"],
+[class*="cookieconsent"],
+[class*="cookiebanner"],
+[class*="cookienotice"] {
+  display: none !important;
+}
+
+/* ---- GDPR generic ---- */
+[id*="gdpr-banner"],
+[id*="gdpr-consent"],
+[id*="gdpr-notice"],
+[id*="gdpr_banner"],
+[id*="gdpr_consent"],
+[class*="gdpr-banner"],
+[class*="gdpr-consent"],
+[class*="gdpr-notice"],
+[class*="gdpr_banner"],
+[class*="gdpr_consent"] {
+  display: none !important;
+}
+
+/* ---- ARIA labels ---- */
+[aria-label*="cookie" i],
+[aria-label*="consent" i],
+[aria-label*="gdpr" i],
+[aria-label*="cookie banner" i] {
+  display: none !important;
+}
+
+/* ---- Dark overlays / backdrops created by consent banners ---- */
+.onetrust-pc-dark-filter,
+.cc-overlay,
+.qc-cmp2-main,
+.didomi-popup-backdrop,
+.sp-message-open,
+div[class*="consent-overlay"],
+div[class*="cookie-overlay"],
+div[id*="consent-overlay"],
+div[id*="cookie-overlay"] {
+  display: none !important;
+}
+
+/* ---- Restore scrolling ----
+   Many consent banners add overflow:hidden to body/html to trap the user */
+body.modal-open,
+body.cookie-modal-open,
+body[style*="overflow: hidden"],
+body.cmplz-blocked,
+body.sp-message-open,
+body.didomi-popup-open,
+html.cookie-modal-open,
+html[style*="overflow: hidden"] {
+  overflow: auto !important;
+}

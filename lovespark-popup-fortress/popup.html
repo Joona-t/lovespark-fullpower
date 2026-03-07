@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoveSpark Popup Fortress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="lib/lovespark-footer.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <span class="header-icon">🏰</span>
+      <h1>Popup Fortress</h1>
+      <div class="theme-dropdown" id="themeDropdown">
+      <button class="theme-dropdown-trigger" id="themeToggle">
+        <span id="themeLabel">Retro Pink</span> ▾
+      </button>
+      <div class="theme-dropdown-menu" id="themeMenu">
+        <div class="theme-dropdown-header">Change Theme</div>
+        <button class="theme-option" data-theme="retro">Retro Pink</button>
+        <button class="theme-option" data-theme="dark">Dark</button>
+        <button class="theme-option" data-theme="beige">Beige</button>
+        <button class="theme-option" data-theme="slate">Slate</button>
+      </div>
+    </div>
+    </header>
+
+    <div class="status-bar">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">Fortress Active</span>
+    </div>
+
+    <div class="stats-card">
+      <div class="stats-row">
+        <span class="stats-label">Popups crushed today</span>
+        <span class="stats-value" id="todayCount">0</span>
+      </div>
+      <div class="stats-row">
+        <span class="stats-label">Lifetime crushed</span>
+        <span class="stats-value" id="totalCount">0</span>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <span class="toggle-label">Fortress</span>
+      <div class="toggle-switch active" id="enableToggle">
+        <div class="toggle-knob"></div>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <span class="footer-msg" id="footerMsg">No popups allowed, bestie! 💕</span>
+    </footer>
+  </div>
+  <script src="lib/lovespark-footer.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
