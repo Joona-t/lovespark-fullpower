@@ -92,7 +92,10 @@ chrome.runtime.onInstalled.addListener(async () => {
   checkDailyReset();
 });
 
-chrome.alarms.create('dailyReset', { periodInMinutes: 60 });
+// Guard: only create alarm if it doesn't already exist (MV3 SW restarts)
+chrome.alarms.get('dailyReset', (existing) => {
+  if (!existing) chrome.alarms.create('dailyReset', { periodInMinutes: 60 });
+});
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === 'dailyReset') checkDailyReset();
 });
